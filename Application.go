@@ -1,4 +1,4 @@
-package config
+package go_config
 
 import (
 	"gopkg.in/yaml.v2"
@@ -32,12 +32,12 @@ func GetConf() *Config {
  * @Description: config配文件构造体
  */
 type Config struct {
-	Server       Server   `yaml:"server"`
-	Cloud        Cloud    `yaml:"cloud"`
-	Database     Database `yaml:"datasource"`
-	Redis        Redis    `yaml:"redis"`
-	Sentinel     []Node   `yaml:"sentinel"`
-	Rbac         Rbac     `yaml:"admin"`
+	Server   Server   `yaml:"server"`
+	Cloud    Cloud    `yaml:"cloud"`
+	Database Database `yaml:"datasource"`
+	Redis    Redis    `yaml:"redis"`
+	Sentinel []Node   `yaml:"sentinel"`
+	Rbac     Rbac     `yaml:"admin"`
 }
 
 /**
