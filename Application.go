@@ -46,7 +46,7 @@ type Config struct {
  * @Description: 管理员权限、角色id配置
  */
 type Rbac struct {
-	AdminRoleId     uint64    `yaml:"admin-role-id"`
+	AdminRoleId     uint64 `yaml:"admin-role-id"`
 	AdminPermission string `yaml:"admin-permission"`
 }
 
@@ -60,9 +60,10 @@ type Node struct {
 	Name            string `yaml:"name"`
 	SentinelAddress string `yaml:"sentinel-address"`
 	Password        string `yaml:"password"`
-	Db              uint64    `yaml:"db"`
-	PoolSize        uint64    `yaml:"pool-size"`
-	MinIdleConns    uint64    `yaml:"min-idle-conns"`
+	Db              uint64 `yaml:"db"`
+	PoolSize        uint64 `yaml:"pool-size"`
+	MinIdleConns    uint64 `yaml:"min-idle-conns"`
+	Timeout         uint64 `yaml:"timeout"`
 	Enable          bool   `yaml:"enable"`
 }
 
@@ -151,6 +152,7 @@ type Redis struct {
 	Db        uint64 `yaml:"db"`
 	MaxIdle   uint64 `yaml:"max-idle"`
 	MaxActive uint64 `yaml:"max-active"`
+	Timeout   uint64 `yaml:"timeout"`
 	Enable    bool   `yaml:"enable"`
 }
 
