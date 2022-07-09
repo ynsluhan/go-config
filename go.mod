@@ -1,4 +1,4 @@
-module github.com/ynsluhan/go-config/v1.0.1
+module github.com/ynsluhan/go-config
 
 go 1.15
 
