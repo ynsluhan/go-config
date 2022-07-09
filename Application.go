@@ -60,9 +60,9 @@ type Node struct {
 	Name            string `yaml:"name"`
 	SentinelAddress string `yaml:"sentinel-address"`
 	Password        string `yaml:"password"`
-	Db              int    `yaml:"db"`
-	PoolSize        int    `yaml:"pool-size"`
-	MinIdleConns    int    `yaml:"min-idle-conns"`
+	Db              uint64    `yaml:"db"`
+	PoolSize        uint64    `yaml:"pool-size"`
+	MinIdleConns    uint64    `yaml:"min-idle-conns"`
 	Enable          bool   `yaml:"enable"`
 }
 
@@ -88,7 +88,7 @@ type Server struct {
  */
 type Token struct {
 	SecretKey string `yaml:"secret-key"`
-	expired   string `yaml:"expired"`
+	expired   uint64 `yaml:"expired"`
 }
 
 /**
@@ -132,12 +132,12 @@ type Consul struct {
  */
 type Database struct {
 	Host         string `yaml:"host"`
-	Port         string `yaml:"port"`
+	Port         uint64 `yaml:"port"`
 	Username     string `yaml:"username"`
 	Password     string `yaml:"password"`
-	Db           string `yaml:"db"`
-	MaxIdle      string `yaml:"max-idle"`
-	MaxOpenConns string `yaml:"max-open-conns"`
+	Db           uint64 `yaml:"db"`
+	MaxIdle      uint64 `yaml:"max-idle"`
+	MaxOpenConns uint64 `yaml:"max-open-conns"`
 }
 
 /**
@@ -146,11 +146,11 @@ type Database struct {
  */
 type Redis struct {
 	Host      string `yaml:"host"`
-	Port      string `yaml:"port"`
+	Port      uint64 `yaml:"port"`
 	Password  string `yaml:"password"`
-	Db        string `yaml:"db"`
-	MaxIdle   string `yaml:"max-idle"`
-	MaxActive string `yaml:"max-active"`
+	Db        uint64 `yaml:"db"`
+	MaxIdle   uint64 `yaml:"max-idle"`
+	MaxActive uint64 `yaml:"max-active"`
 	Enable    bool   `yaml:"enable"`
 }
 
