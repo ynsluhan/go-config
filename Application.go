@@ -70,11 +70,15 @@ type Node struct {
  * @Description: 服务器属性构造体
  */
 type Server struct {
-	Host  string `yaml:"host"`
-	Name  string `yaml:"name"`
-	Port  uint64 `yaml:"port"`
-	Debug bool   `yaml:"debug"`
-	Token Token  `yaml:"token"`
+	Host               string `yaml:"host"`
+	Name               string `yaml:"name"`
+	Port               uint64 `yaml:"port"`
+	Debug              bool   `yaml:"debug"`
+	Token              Token  `yaml:"token"`
+	EnableLogger       bool   `yaml:"enable-logger"`
+	EnableJwt          bool   `yaml:"enable-jwt"`
+	EnableRecover      bool   `yaml:"enable-recover"`
+	EnableErrorRecover bool   `yaml:"enable-error-recover"`
 }
 
 /**
