@@ -63,6 +63,7 @@ type Node struct {
 	Db              int    `yaml:"db"`
 	PoolSize        int    `yaml:"pool-size"`
 	MinIdleConns    int    `yaml:"min-idle-conns"`
+	Enable          bool   `yaml:"enable"`
 }
 
 /**
@@ -149,6 +150,7 @@ type Redis struct {
 	Db        string `yaml:"db"`
 	MaxIdle   string `yaml:"max-idle"`
 	MaxActive string `yaml:"max-active"`
+	Enable    bool   `yaml:"enable"`
 }
 
 /**
