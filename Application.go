@@ -100,10 +100,11 @@ type Cloud struct {
  * @Description: Nacos
  */
 type Nacos struct {
-	Host    string `yaml:"host"`
-	Port    uint64 `yaml:"port"`
-	Group   string `yaml:"group"`
-	Cluster string `yaml:"cluster"`
+	Host      string `yaml:"host"`
+	Port      uint64 `yaml:"port"`
+	Namespace string `yaml:"namespace"`
+	Group     string `yaml:"group"`
+	Cluster   string `yaml:"cluster"`
 }
 
 /**
@@ -111,10 +112,11 @@ type Nacos struct {
  * @Description: Consul
  */
 type Consul struct {
-	Host    string `yaml:"host"`
-	Port    uint64 `yaml:"port"`
-	Group   string `yaml:"group"`
-	Cluster string `yaml:"cluster"`
+	Host      string `yaml:"host"`
+	Port      uint64 `yaml:"port"`
+	Namespace string `yaml:"namespace"`
+	Group     string `yaml:"group"`
+	Cluster   string `yaml:"cluster"`
 }
 
 /**
