@@ -46,7 +46,7 @@ type Config struct {
  * @Description: 管理员权限、角色id配置
  */
 type Rbac struct {
-	AdminRoleId     int    `yaml:"admin-role-id"`
+	AdminRoleId     uint64    `yaml:"admin-role-id"`
 	AdminPermission string `yaml:"admin-permission"`
 }
 
