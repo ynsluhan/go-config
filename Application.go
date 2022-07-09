@@ -171,22 +171,19 @@ func ReadConf(c *Config) {
 	file, err := os.Open(FileName)
 	//
 	if err != nil {
-		log.Println("error 配置文件打开异常： ", err.Error())
-		os.Exit(0)
+		log.Fatalln("error 配置文件打开异常： ", err.Error())
 	}
 	//
 	bytes, err := ioutil.ReadAll(file)
 	//
 	if err != nil {
-		log.Println("error 配置文件读取异常： ", err.Error())
-		os.Exit(0)
+		log.Fatalln("error 配置文件读取异常： ", err.Error())
 	}
 	//
 	err = yaml.Unmarshal(bytes, &c)
 	//
 	if err != nil {
-		log.Println("error 配置文件绑定结构体异常： ", err.Error())
-		os.Exit(0)
+		log.Fatalln("error 配置文件绑定结构体异常： ", err.Error())
 	}
 }
 
