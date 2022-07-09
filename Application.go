@@ -103,6 +103,8 @@ type Nacos struct {
 	Host      string `yaml:"host"`
 	Port      uint64 `yaml:"port"`
 	Namespace string `yaml:"namespace"`
+	LogDir    string `yaml:"log-dir"`
+	LogLevel  string `yaml:"log-level"`
 	Group     string `yaml:"group"`
 	Cluster   string `yaml:"cluster"`
 }
