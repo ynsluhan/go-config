@@ -7,6 +7,7 @@ import (
 	"os"
 	"path"
 )
+
 // 配置文件
 var conf Config
 
@@ -99,8 +100,10 @@ type Cloud struct {
  * @Description: Nacos
  */
 type Nacos struct {
-	Host string `yaml:"host"`
-	Port uint64 `yaml:"port"`
+	Host    string `yaml:"host"`
+	Port    uint64 `yaml:"port"`
+	Group   string `yaml:"group"`
+	Cluster string `yaml:"cluster"`
 }
 
 /**
@@ -108,8 +111,10 @@ type Nacos struct {
  * @Description: Consul
  */
 type Consul struct {
-	Host string `yaml:"host"`
-	Port uint64 `yaml:"port"`
+	Host    string `yaml:"host"`
+	Port    uint64 `yaml:"port"`
+	Group   string `yaml:"group"`
+	Cluster string `yaml:"cluster"`
 }
 
 /**
