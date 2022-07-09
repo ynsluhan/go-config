@@ -147,6 +147,7 @@ type Database struct {
 type Redis struct {
 	Host      string `yaml:"host"`
 	Port      string `yaml:"port"`
+	Password  string `yaml:"password"`
 	Db        string `yaml:"db"`
 	MaxIdle   string `yaml:"max-idle"`
 	MaxActive string `yaml:"max-active"`
