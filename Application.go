@@ -78,6 +78,8 @@ type Server struct {
 	Debug              bool   `yaml:"debug"`
 	Token              Token  `yaml:"token"`
 	EnableLogger       bool   `yaml:"enable-logger"`
+	SaveLogger         bool   `yaml:"save-logger"`
+	LoggerDir          string `yaml:"logger-dir"`
 	EnableJwt          bool   `yaml:"enable-jwt"`
 	EnableRecover      bool   `yaml:"enable-recover"`
 	EnableErrorRecover bool   `yaml:"enable-error-recover"`
