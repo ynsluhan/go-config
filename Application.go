@@ -52,12 +52,31 @@ type Rbac struct {
 
 /**
  * @Author yNsLuHan
+ * @Description: redis Pool 构造体
+ */
+type Redis struct {
+	Host        string `yaml:"host"`
+	Port        uint64 `yaml:"port"`
+	Password    string `yaml:"password"`
+	Db          uint64 `yaml:"db"`
+	AdminPrefix string `yaml:"admin-prefix"`
+	prefix      string `yaml:"prefix"`
+	MaxIdle     uint64 `yaml:"max-idle"`
+	MaxActive   uint64 `yaml:"max-active"`
+	Timeout     uint64 `yaml:"timeout"`
+	Enable      bool   `yaml:"enable"`
+}
+
+/**
+ * @Author yNsLuHan
  * @Description: redis Sentinel 构造体  redis Sentinel Node 构造体
  */
 type Node struct {
 	// 从gin上下文获取的名字
 	ContentName     string `yaml:"content-name"`
 	Name            string `yaml:"name"`
+	AdminPrefix     string `yaml:"admin-prefix"`
+	prefix          string `yaml:"prefix"`
 	SentinelAddress string `yaml:"sentinel-address"`
 	Password        string `yaml:"password"`
 	Db              uint64 `yaml:"db"`
@@ -143,21 +162,6 @@ type Database struct {
 	Db           uint64 `yaml:"db"`
 	MaxIdle      uint64 `yaml:"max-idle"`
 	MaxOpenConns uint64 `yaml:"max-open-conns"`
-}
-
-/**
- * @Author yNsLuHan
- * @Description: redis Pool 构造体
- */
-type Redis struct {
-	Host      string `yaml:"host"`
-	Port      uint64 `yaml:"port"`
-	Password  string `yaml:"password"`
-	Db        uint64 `yaml:"db"`
-	MaxIdle   uint64 `yaml:"max-idle"`
-	MaxActive uint64 `yaml:"max-active"`
-	Timeout   uint64 `yaml:"timeout"`
-	Enable    bool   `yaml:"enable"`
 }
 
 /**
