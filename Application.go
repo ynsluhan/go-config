@@ -82,6 +82,7 @@ type Server struct {
 	LoggerDir          string `yaml:"logger-dir"`
 	EnableJwt          bool   `yaml:"enable-jwt"`
 	EnableRedisJwt     bool   `yaml:"enable-redis-jwt"`
+	EnableRbac         bool   `yaml:"enable-rbac"`
 	EnableRecover      bool   `yaml:"enable-recover"`
 	EnableErrorRecover bool   `yaml:"enable-error-recover"`
 }
